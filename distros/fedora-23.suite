@@ -1,0 +1,22 @@
+name = Fedora
+release = 23
+
+gpg_key =  gpg/RPM-GPG-KEY-fedora-23-primary
+gpg_key =  gpg/RPM-GPG-KEY-fedora-23-secondary
+
+packages = packages/${suite}.list
+
+[post_install]
+finalize = scripts/fix_rpmdb.py
+finalize = scripts/clean_yumbootstrap.py
+
+[repositories]
+fedora         = http://archives.fedoraproject.org/pub/archive/fedora/linux/releases/23/Everything/$basearch/os/
+fedora-updates = http://archives.fedoraproject.org/pub/archive/fedora/linux/updates/23/$basearch/
+
+[environment]
+#PYTHONPATH=...
+#PYTHONPATH
+#SUDO_*
+
+# vim:ft=dosini
