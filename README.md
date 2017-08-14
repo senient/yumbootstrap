@@ -50,7 +50,7 @@ Installing yumbootstrap
 -----------------------
 
 For Debian-based distributions, *dpkg-dev*, *fakeroot*, *debhelper* (7+),
-*python*, *python-setuptools*, *python-support*, and (obviously) *yum* are
+*python*, *python-setuptools*, and (obviously) *yum* are
 required.
 
     dpkg-buildpackage -b -uc
